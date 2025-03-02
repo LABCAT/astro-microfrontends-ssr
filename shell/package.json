@@ -7,24 +7,17 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
+    "preview": "deno run --allow-net --allow-read --allow-env --allow-import ./dist/server/entry.mjs",
     "astro": "astro",
     "prettier": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/deno": "4.1.0",
-    "@astrojs/react": "2.0.0",
-    "@astrojs/solid-js": "2.1.0",
-    "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
-    "astro": "2.4.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "solid-js": "1.6.14",
-    "swr": "2.1.5"
+    "@deno/astro-adapter": "0.2.0",
+    "@astrojs/react": "3.0.10",
+    "astro": "5.0.1"
   },
   "devDependencies": {
-    "prettier": "2.8.4",
-    "prettier-plugin-astro": "0.8.0"
+    "prettier": "3.2.5",
+    "prettier-plugin-astro": "0.13.0"
   }
 }

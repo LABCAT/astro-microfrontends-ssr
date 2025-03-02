@@ -1,13 +1,12 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
-import solidJs from "@astrojs/solid-js";
-import deno from "@astrojs/deno";
+import denoAdapter from "@deno/astro-adapter";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
   output: "server",
-  adapter: deno({
+  adapter: denoAdapter({
     port: 3000,
   }),
 });

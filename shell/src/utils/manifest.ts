@@ -6,17 +6,17 @@ const fetchManifest = async (url: string) => {
 };
 
 export const buildManifest = async () => {
-  const manifestA = await fetchManifest("http://localhost:7100/manifest.json");
-  const manifestB = await fetchManifest("http://localhost:7200/manifest.json");
+  const manifestA = await fetchManifest("http://localhost:4173/manifest.json");
+  const manifestB = await fetchManifest("http://localhost:4174/manifest.json");
 
   return {
     mfa: {
-      url: `http://localhost:7100/${manifestA[js][asset]}`,
-      css: `http://localhost:7100/${manifestA[css][asset]}`,
+      url: `http://localhost:4173/${manifestA[js][asset]}`,
+      css: `http://localhost:4173/${manifestA[css][asset]}`,
     },
     mfb: {
-      url: `http://localhost:7200/${manifestB[js][asset]}`,
-      css: `http://localhost:7200/${manifestB[css][asset]}`,
+      url: `http://localhost:4174/${manifestB[js][asset]}`,
+      css: `http://localhost:4174/${manifestB[css][asset]}`,
     },
   };
 };

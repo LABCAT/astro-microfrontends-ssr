@@ -9,7 +9,6 @@ export default ({ command }) => ({
     rollupOptions: {
       input: resolve(__dirname, "src/MicroFrontend.jsx"),
       preserveEntrySignatures: "exports-only",
-      external: ["react", "react-dom"],
       output: {
         entryFileNames: "bundle.[hash].js",
         assetFileNames: "bundle.[hash].css",
